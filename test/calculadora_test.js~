@@ -1,0 +1,26 @@
+const assert = require('chai').assert;
+const calculadora = require('../src/calculadora');
+
+describe('Calculadora', ()=>{
+    const resultSoma = calculadora.soma(1,2);
+    const expectSoma = 3;
+    const resultSubt = calculadora.subtrai(3,2);
+    const expectSubt = 1;
+    describe('function soma\(\)', ()=>{
+        it('Calculadora.soma\(\) should sum two numbers',()=>{
+	    assert.equal(resultSoma, expectSoma);
+        });
+        it('Calculadora.soma\(\) sould return a integer', ()=>{
+	    assert.typeOf(resultSoma, 'number');
+        });
+    });
+    describe('function subtrair\(\)', ()=> {
+        it('Calculadora.subrai\(\) should subtract two numbers', ()=>{
+	    assert.equal(resultSubt, expectSubt);
+        });
+        it('Calculadora.subtrai\(\) sould return a number', ()=> {
+	    assert.typeOf(resultSubt, 'number');
+        });
+     });
+});
+
