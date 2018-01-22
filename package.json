@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha ./test/calculadora_test.js --watch",
+    "test": "mocha ./tests/calculadora_test.js --watch",
     "start": "npm ./src/calculadora.js"
   },
   "keywords": [
@@ -16,10 +16,12 @@
   "author": "David",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.1.2",
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "mocha": "^5.0.0"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
   }
 }
