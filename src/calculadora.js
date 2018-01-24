@@ -16,9 +16,18 @@ function divide(a, b) {
   }
   return null;
 }
+
+function power(a, b) {
+  if (b==0) {
+    return 1;
+  }
+  return Math.pow(a,b);
+}
+
 module.exports = {
   soma,
   subtrai,
   multiplica,
   divide,
+  power,
 };

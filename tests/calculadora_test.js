@@ -12,6 +12,8 @@ describe('Calculadora', () => {
   const expectDivi = 2;
   const resultDivz = calculadora.divide(4, 0);
   const expectDivz = null;
+  const resultPower = calculadora.power(2,3);
+  const expectPower = 8;
 
   describe('function soma()', () => {
     it('Calculadora.soma() should sum two numbers', () => {
@@ -46,6 +48,14 @@ describe('Calculadora', () => {
     });
     it('Calculadora.divide() should return null if b=0', () => {
       assert.equal(resultDivz, expectDivz);
+    });
+  });
+  describe('function power()', ()=>{
+    it('Calculadora.power() should return x^y', () => {
+      assert.equal(resultPower, expectPower);
+    });
+    it('Calculadora.power() should return a number', () => {
+      assert.typeOf(resultPower, 'number');
     });
   });
 });
